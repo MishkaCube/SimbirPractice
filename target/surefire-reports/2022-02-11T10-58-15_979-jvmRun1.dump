@@ -1,0 +1,42 @@
+# Created on 2022-02-11T10:58:20.527
+java.lang.VerifyError: Expecting a stackmap frame at branch target 33
+Exception Details:
+  Location:
+    MainTest.testing()V @9: invokestatic
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0000000: b200 662a 2ab8 006c 4cb8 0072 2bb6 0076
+    0000010: b200 1f12 43b6 0045 b200 1fb6 0048 a700
+    0000020: 0d4d b800 722c b600 7a2c bfb8 0072 b600
+    0000030: 7db1                                   
+  Exception Handler Table:
+    bci [9, 33] => handler: 33
+
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402)
+	at java.base/java.lang.Class.privateGetPublicMethods(Class.java:3427)
+	at java.base/java.lang.Class.getMethods(Class.java:2019)
+	at org.testng.internal.TestNGClassFinder.createObjectFactory(TestNGClassFinder.java:209)
+	at org.testng.internal.TestNGClassFinder.<init>(TestNGClassFinder.java:64)
+	at org.testng.TestRunner.initMethods(TestRunner.java:443)
+	at org.testng.TestRunner.init(TestRunner.java:333)
+	at org.testng.TestRunner.init(TestRunner.java:286)
+	at org.testng.TestRunner.<init>(TestRunner.java:176)
+	at org.testng.SuiteRunner$DefaultTestRunnerFactory.newTestRunner(SuiteRunner.java:635)
+	at org.testng.SuiteRunner.init(SuiteRunner.java:221)
+	at org.testng.SuiteRunner.<init>(SuiteRunner.java:114)
+	at org.testng.TestNG.createSuiteRunner(TestNG.java:1342)
+	at org.testng.TestNG.createSuiteRunners(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1160)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+
+
